@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ThemeController"
+            style="-fx-background-color: linear-gradient(to bottom, #141E30, #243B55);">
+
+  
+    <Label text=" Choisissez un thème"
+       style="-fx-font-size: 26px; -fx-text-fill: white; -fx-font-weight: bold;"
+       AnchorPane.topAnchor="70"
+       AnchorPane.leftAnchor="0"
+       AnchorPane.rightAnchor="0"
+       alignment="CENTER"/>
+
+
+    <HBox spacing="30" alignment="CENTER"
+          AnchorPane.topAnchor="80"
+          AnchorPane.bottomAnchor="20"
+          AnchorPane.leftAnchor="50"
+          AnchorPane.rightAnchor="50">
+
+        <!-- Thème Anims-->
+        <VBox spacing="5" alignment="CENTER"
+              onMouseClicked="#themeAnim"
+              style="-fx-background-color: white; -fx-padding: 5; -fx-background-radius: 15;"
+              maxWidth="200" maxHeight="250">
+            <!-- Image qui prend presque tout le card -->
+            <ImageView fx:id="imgAnim" fitWidth="250" fitHeight="250" preserveRatio="true" pickOnBounds="true"/>
+            <!-- Nom du thème en bas -->
+            <Label text="Animes 🐾" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+        </VBox>
+
+        <!-- Thème Cartes -->
+        <VBox spacing="5" alignment="CENTER"
+              onMouseClicked="#themeCards"
+              style="-fx-background-color: white; -fx-padding: 5; -fx-background-radius: 15;"
+              maxWidth="200" maxHeight="250">
+            <ImageView fx:id="imgCards" fitWidth="250" fitHeight="250" preserveRatio="true" pickOnBounds="true"/>
+            <Label text="Cartes 🃏" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+        </VBox>
+
+        <!-- Thème Esthétique -->
+        <VBox spacing="5" alignment="CENTER"
+              onMouseClicked="#themeEsthetique"
+              style="-fx-background-color: white; -fx-padding: 5; -fx-background-radius: 15;"
+              maxWidth="200" maxHeight="250">
+            <ImageView fx:id="imgEsthetique" fitWidth="250" fitHeight="250" preserveRatio="true" pickOnBounds="true"/>
+            <Label text="Esthétique ✨" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+        </VBox>
+
+    </HBox>
+
+</AnchorPane>

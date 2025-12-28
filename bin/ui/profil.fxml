@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ProfilController"
+      style="-fx-padding: 40; -fx-background-color: linear-gradient(to bottom, #141E30, #243B55);">
+
+    <!-- profil  INFO-->
+    <VBox spacing="20" alignment="CENTER" 
+          style="-fx-background-color: rgba(255, 255, 255, 0.08); -fx-padding: 30; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0, 0, 5);">
+
+        <Label text="👤 MON PROFIL" 
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #FFD700;"/>
+
+        <Separator prefWidth="300" style="-fx-background-color: rgba(255,255,255,0.3);"/>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="🎮 Joueur :" 
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"
+                   prefWidth="120"/>
+            <Label fx:id="labelUsername" text="Username" 
+                   style="-fx-font-size: 16px; -fx-text-fill: #FFD700;"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="🏆 Niveau Max :" 
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"
+                   prefWidth="120"/>
+            <Label fx:id="labelNiveau" text="1" 
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF6B6B;"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="⭐ Score Total :" 
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"
+                   prefWidth="120"/>
+            <Label fx:id="labelScore" text="0" 
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #4ECDC4;"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="📅 Membre depuis :" 
+                   style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;"
+                   prefWidth="120"/>
+            <Label fx:id="labelDate" text="--/--/----" 
+                   style="-fx-font-size: 14px; -fx-text-fill: #AAAAAA;"/>
+        </HBox>
+
+        <Separator prefWidth="300" style="-fx-background-color: rgba(255,255,255,0.3);"/>
+
+        <VBox spacing="5" alignment="CENTER">
+            <Label fx:id="labelProgression" text="Continue comme ça ! 🚀" 
+                   style="-fx-font-size: 14px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;"/>
+        </VBox>
+
+    </VBox>
+
+    <!-- Bouton retour -->
+    <Button text="← Retour au Menu" onAction="#retourMenu" 
+            style="-fx-background-color: transparent; -fx-border-color: #FFD700; -fx-border-width: 2; -fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 10 30;"
+            prefWidth="200"/>
+
+</VBox>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.HomeController"
+            style="-fx-background-color: linear-gradient(to bottom, #141E30, #243B55);">
+
+    <HBox AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0"
+          spacing="0"
+          alignment="CENTER">
+
+        <!-- ================= Profil ================= -->
+        <VBox spacing="15"
+              alignment="TOP_CENTER"
+              prefWidth="550"
+              style="-fx-background-color: rgba(255,255,255,0.08); -fx-padding: 40; -fx-background-radius: 15;">
+
+            <!-- image de profil-->
+            <ImageView fx:id="avatarProfile" pickOnBounds="true" preserveRatio="true"
+                       fitWidth="80" fitHeight="80"
+                       style="-fx-cursor: hand;"
+                       onMouseClicked="#toggleProfileMenu">
+                <image>
+                    <Image url="@/images/profil.jpg"/>
+                </image>
+            </ImageView>
+
+            <!-- Texte de bienvenue avec le nom de useer -->
+            <Label fx:id="labelWelcome" text="Bienvenue "
+                   style="-fx-font-size: 20px; -fx-text-fill: white;"/>
+
+            <!-- Menu déroulant profil -->
+            <VBox fx:id="profileMenu" visible="false" spacing="10"
+                  style="-fx-background-color: rgba(255,255,255,0.15); -fx-padding: 10; -fx-background-radius: 10;"
+                  alignment="CENTER">
+                <Button text="👤 Profil" onAction="#afficherProfil"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button text="🎨 Changer le thème" onAction="#retourTheme"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button text="🚪 Déconnexion" onAction="#deconnexion"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </VBox>
+
+           <!-- Boutons principaux-->
+<VBox spacing="20" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+    <Button text="🎯 COMMENCER À JOUER" onAction="#commencerJeu"
+            style="-fx-font-size: 16px;
+                   -fx-background-color: black;
+                   -fx-text-fill: #ffffff;
+                   -fx-background-radius: 10;
+                   -fx-padding: 15;"
+            prefWidth="280"/>
+    <Button text="🤖 Jouer contre l'IA" onAction="#jouerContreIA"
+            style="-fx-font-size: 16px;
+                   -fx-background-color: black;
+                   -fx-text-fill: #ffffff;
+                   -fx-background-radius: 10;
+                   -fx-padding: 15;"
+            prefWidth="280"/>
+</VBox>
+
+
+        </VBox>               
+
+
+        <!-- =================  GIF ================= -->
+        <StackPane fx:id="gifContainer"
+                   style="-fx-background-color: black;"
+                   HBox.hgrow="ALWAYS"
+                   alignment="CENTER">
+
+            <ImageView fx:id="gifView"
+                       fitWidth="800"
+                       fitHeight="600"
+                       preserveRatio="true"/>
+        </StackPane>
+
+    </HBox>
+
+</AnchorPane>
